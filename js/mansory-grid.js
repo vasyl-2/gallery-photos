@@ -23,4 +23,6 @@ function resizeGridItem(item) {
     item.style.gridRowEnd = "span "+rowSpan;
 }
 
-resizeAllGridItems();
+window.onload = resizeAllGridItems();
+window.addEventListener("resize", resizeAllGridItems);
+
