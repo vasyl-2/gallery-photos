@@ -10,11 +10,12 @@ function resizeGridItem(item) {
     // getting parent element
     const grid = document.getElementsByClassName('gallery')[0];
 
-    // getting grid-auto-rows property of parent element
-    const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+    // getting styles of parent element
+    const computedStyles = window.getComputedStyle(grid);
 
-    // getting grid-row-gap property of parent element
-    const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+    // getting grid-auto-rows and grid-row-gap properties of parent element
+    const rowHeight = parseInt(computedStyles.getPropertyValue('grid-auto-rows'));
+    const rowGap = parseInt(computedStyles.getPropertyValue('grid-row-gap'));
 
     const content = item.querySelector('.content');
     
